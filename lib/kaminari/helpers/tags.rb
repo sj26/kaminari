@@ -27,7 +27,7 @@ module Kaminari
       end
 
       def page_url_for(page)
-        @template.url_for params_for(page).merge(:only_path => true)
+        @template.url_for params_for(page).reverse_merge(:only_path => true)
       end
 
       private
